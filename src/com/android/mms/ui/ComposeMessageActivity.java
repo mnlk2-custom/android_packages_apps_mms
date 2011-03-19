@@ -47,6 +47,8 @@ import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -112,7 +114,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.CursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -222,7 +223,9 @@ public class ComposeMessageActivity extends Activity
     private Conversation mConversation;     // Conversation we are working in
 
     private boolean mExitOnSent;            // Should we finish() after sending a message?
-
+    
+    private boolean mBlackBackground;       // Option for switch background from white to black
+    
     private View mTopPanel;                 // View containing the recipient and subject editors
     private View mBottomPanel;              // View containing the text editor, send button, ec.
     private EditText mTextEditor;           // Text editor to type your message into
@@ -1672,6 +1675,13 @@ public class ComposeMessageActivity extends Activity
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.compose_message_activity);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences((Context)ComposeMessageActivity.this);
+        mBlackBackground = prefs.getBoolean(MessagingPreferenceActivity.BLACK_BACKGROUND, false);
+        if(!mBlackBackground) {
+            setContentView(R.layout.compose_message_activity);
+        } else {
+            setContentView(R.layout.compose_message_activity_black);
+        }        
         setProgressBarVisibility(false);
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE |
@@ -2003,13 +2013,6 @@ public class ComposeMessageActivity extends Activity
 
         if (mMsgListAdapter != null) {
             mMsgListAdapter.changeCursor(null);
-        }
-
-        if (mRecipientsEditor != null) {
-            CursorAdapter recipientsAdapter = (CursorAdapter)mRecipientsEditor.getAdapter();
-            if (recipientsAdapter != null) {
-                recipientsAdapter.changeCursor(null);
-            }
         }
 
         if (Log.isLoggable(LogTag.APP, Log.VERBOSE)) {
