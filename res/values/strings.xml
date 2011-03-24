@@ -773,6 +773,8 @@
     <!-- Which timestamps -->
     <string name="pref_title_mms_use_sent_timestamp">Use original timestamps</string>
     <string name="pref_summary_mms_use_sent_timestamp">Display and store sent date instead of reception date</string>
-        
+
+    <!-- Setting item for folder to save MMS Attachments to -->
+    <string name="pref_title_save_location">Attachment save folder</string>        
 </resources>
 
