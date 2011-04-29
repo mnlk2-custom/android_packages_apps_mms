@@ -109,13 +109,6 @@ public class MessageListItem extends LinearLayout implements
         super(context);
     }
 
-    public MessageListItem(Context context, AttributeSet attrs) {
-        super(context, attrs);
-
-        int color = mContext.getResources().getColor(R.color.timestamp_color);
-        mColorSpan = new ForegroundColorSpan(color);
-    }
-
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
