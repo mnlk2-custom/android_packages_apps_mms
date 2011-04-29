@@ -36,7 +36,10 @@ public class MmsConfig {
 
     private static final int MAX_IMAGE_HEIGHT = 480;
     private static final int MAX_IMAGE_WIDTH = 640;
+<<<<<<< HEAD
+=======
     private static final int MAX_TEXT_LENGTH = 2000;
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
 
     /**
      * Whether to hide MMS functionality from the user (i.e. SMS only).

@@ -40,8 +40,11 @@ import android.view.MenuItem;
 
 import com.android.mms.util.Recycler;
 
+<<<<<<< HEAD
+=======
 import android.content.res.Resources;
 
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
 /**
  * With this activity, users can set preferences for MMS and SMS and
  * can access and manipulate SMS messages stored on the SIM.
@@ -60,18 +63,26 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
     public static final String AUTO_RETRIEVAL           = "pref_key_mms_auto_retrieval";
     public static final String RETRIEVAL_DURING_ROAMING = "pref_key_mms_retrieval_during_roaming";
     public static final String AUTO_DELETE              = "pref_key_auto_delete";
+<<<<<<< HEAD
     public static final String MMS_SAVE_LOCATION        = "pref_save_location";
     public static final String BLACK_BACKGROUND         = "pref_key_mms_black_background";
     public static final String SENT_TIMESTAMP           = "pref_key_mms_use_sent_timestamp";
     
+=======
+
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
     // Menu entries
     private static final int MENU_RESTORE_DEFAULTS    = 1;
 
     private Preference mSmsLimitPref;
+<<<<<<< HEAD
+    private Preference mMmsLimitPref;
+=======
     private Preference mSmsDeliveryReportPref;
     private Preference mMmsLimitPref;
     private Preference mMmsDeliveryReportPref;
     private Preference mMmsReadReportPref;
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
     private Preference mManageSimPref;
     private Preference mClearHistoryPref;
     private ListPreference mVibrateWhenPref;
@@ -84,6 +95,10 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.preferences);
 
+<<<<<<< HEAD
+        mManageSimPref = findPreference("pref_key_manage_sim_messages");
+        mSmsLimitPref = findPreference("pref_key_sms_delete_limit");
+=======
         setMessagePreferences();
     }
 
@@ -93,6 +108,7 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
         mSmsDeliveryReportPref = findPreference("pref_key_sms_delivery_reports");
         mMmsDeliveryReportPref = findPreference("pref_key_mms_delivery_reports");
         mMmsReadReportPref = findPreference("pref_key_mms_read_reports");
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
         mMmsLimitPref = findPreference("pref_key_mms_delete_limit");
         mClearHistoryPref = findPreference("pref_key_mms_clear_history");
         mVibrateWhenPref = (ListPreference) findPreference(NOTIFICATION_VIBRATE_WHEN);
@@ -103,6 +119,8 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
                 (PreferenceCategory)findPreference("pref_key_sms_settings");
             smsCategory.removePreference(mManageSimPref);
         }
+<<<<<<< HEAD
+=======
 
         boolean SMSDeliveryReport = Resources.getSystem()
                 .getBoolean(com.android.internal.R.bool.config_sms_delivery_reports_support);
@@ -115,6 +133,7 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
             }
         }
 
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
         if (!MmsConfig.getMmsEnabled()) {
             // No Mms, remove all the mms-related preferences
             PreferenceCategory mmsOptions =
@@ -124,6 +143,8 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
             PreferenceCategory storageOptions =
                 (PreferenceCategory)findPreference("pref_key_storage_settings");
             storageOptions.removePreference(findPreference("pref_key_mms_delete_limit"));
+<<<<<<< HEAD
+=======
         } else {
             boolean MMSDeliveryReport = Resources.getSystem()
                     .getBoolean(com.android.internal.R.bool.config_mms_delivery_reports_support);
@@ -139,6 +160,7 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
                     (PreferenceCategory)findPreference("pref_key_mms_settings");
                 mmsOptions.removePreference(mMmsReadReportPref);
             }
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
         }
 
         // If needed, migrate vibration setting from a previous version
@@ -221,7 +243,10 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
                 .edit().clear().apply();
         setPreferenceScreen(null);
         addPreferencesFromResource(R.xml.preferences);
+<<<<<<< HEAD
+=======
         setMessagePreferences();
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
     }
 
     NumberPickerDialog.OnNumberSetListener mSmsLimitListener =

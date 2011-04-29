@@ -62,8 +62,11 @@ import com.google.android.mms.pdu.PduBody;
 import com.google.android.mms.pdu.PduPersister;
 import com.google.android.mms.pdu.SendReq;
 
+<<<<<<< HEAD
+=======
 import android.telephony.SmsMessage;
 
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
 /**
  * Contains all state related to a message being edited by the user.
  */
@@ -388,6 +391,10 @@ public class WorkingMessage {
             slideShowEditor.removeSlide(mSlideshow.size() - 1);
         }
 
+<<<<<<< HEAD
+        // Set HAS_ATTACHMENT if we need it.
+        updateState(HAS_ATTACHMENT, hasAttachment(), true);
+=======
         if (!MmsConfig.getMultipartSmsEnabled()) {
             if (!append && mAttachmentType == TEXT) {
                 int[] params = SmsMessage.calculateLength(getText(), false);
@@ -411,6 +418,7 @@ public class WorkingMessage {
             // Set HAS_ATTACHMENT if we need it.
             updateState(HAS_ATTACHMENT, hasAttachment(), true);
         }
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
         correctAttachmentState();
         return result;
     }
@@ -909,6 +917,8 @@ public class WorkingMessage {
         return (mMmsState > 0);
     }
 
+<<<<<<< HEAD
+=======
     /**
      * Set whether or not we want to send this message via MMS in order to
      * avoid sending an excessive number of concatenated SMS messages.
@@ -919,6 +929,7 @@ public class WorkingMessage {
         updateState(LENGTH_REQUIRES_MMS, mmsRequired, notify);
     }
 
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
     private static String stateString(int state) {
         if (state == 0)
             return "<none>";

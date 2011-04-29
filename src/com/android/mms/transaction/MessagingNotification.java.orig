@@ -50,8 +50,11 @@ import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+<<<<<<< HEAD
 import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.provider.ContactsContract.PhoneLookup;
+=======
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
 import android.provider.Telephony.Mms;
 import android.provider.Telephony.Sms;
 import android.text.Spannable;
@@ -87,9 +90,12 @@ public class MessagingNotification {
     private static final String[] SMS_STATUS_PROJECTION = new String[] {
         Sms.THREAD_ID, Sms.DATE, Sms.ADDRESS, Sms.SUBJECT, Sms.BODY };
 
+<<<<<<< HEAD
     private static final String[] LOOKUP_PROJECTION = new String[] {
         PhoneLookup.DISPLAY_NAME, PhoneLookup.TYPE, PhoneLookup.LABEL };
     
+=======
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
     // These must be consistent with MMS_STATUS_PROJECTION and
     // SMS_STATUS_PROJECTION.
     private static final int COLUMN_THREAD_ID   = 0;
@@ -99,11 +105,14 @@ public class MessagingNotification {
     private static final int COLUMN_SUBJECT     = 3;
     private static final int COLUMN_SUBJECT_CS  = 4;
     private static final int COLUMN_SMS_BODY    = 4;
+<<<<<<< HEAD
     
     // These must be consistent with LOOKUP_PROJECTION
     private static final int COLUMN_DISPLAY_NAME = 0;
     private static final int COLUMN_TYPE         = 1;
     private static final int COLUMN_LABEL        = 2;    
+=======
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
 
     private static final String NEW_INCOMING_SM_CONSTRAINT =
             "(" + Sms.TYPE + " = " + Sms.MESSAGE_TYPE_INBOX
@@ -202,10 +211,18 @@ public class MessagingNotification {
 
         // And deals with delivery reports (which use Toasts). It's safe to call in a worker
         // thread because the toast will eventually get posted to a handler.
+<<<<<<< HEAD
+        // Oh no it doesn't since this design is so bad
+        //delivery = getSmsNewDeliveryInfo(context);
+        //if (delivery != null) {
+        //    delivery.deliver(context, isStatusMessage);
+        //}
+=======
         delivery = getSmsNewDeliveryInfo(context);
         if (delivery != null) {
             delivery.deliver(context, isStatusMessage);
         }
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
     }
 
     /**
@@ -218,6 +235,7 @@ public class MessagingNotification {
         updateDownloadFailedNotification(context);
     }
 
+<<<<<<< HEAD
     /**
     * Display delivery notification. One for each call, not just for
     * most recent one.
@@ -265,6 +283,8 @@ public class MessagingNotification {
             }).start();
         }
         
+=======
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
     private static final int accumulateNotificationInfo(
             SortedSet set, MmsSmsNotificationInfo info) {
         if (info != null) {

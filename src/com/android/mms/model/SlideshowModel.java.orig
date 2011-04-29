@@ -157,6 +157,8 @@ public class SlideshowModel extends Model
                 try {
                     MediaModel media = MediaModelFactory.getMediaModel(
                             context, sme, layouts, pb);
+<<<<<<< HEAD
+=======
 
                     /*
                     * This is for slide duration value set.
@@ -202,6 +204,7 @@ public class SlideshowModel extends Model
                             }
                         }
                     }
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
                     SmilHelper.addMediaElementEventListeners(
                             (EventTarget) sme, media);
                     mediaSet.add(media);

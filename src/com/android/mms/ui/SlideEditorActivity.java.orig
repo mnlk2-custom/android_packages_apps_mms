@@ -60,9 +60,12 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
+<<<<<<< HEAD
+=======
 import android.text.InputFilter.LengthFilter;
 import android.widget.EditText;
 import android.text.InputFilter;
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
 
 /**
  * This activity allows user to edit the contents of a slide.
@@ -109,7 +112,10 @@ public class SlideEditorActivity extends Activity {
     private Button mPreview;
     private Button mReplaceImage;
     private Button mRemoveSlide;
+<<<<<<< HEAD
+=======
     private EditText mTextEditor;
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
     private Button mDone;
     private BasicSlideEditorView mSlideView;
 
@@ -146,10 +152,13 @@ public class SlideEditorActivity extends Activity {
         mRemoveSlide = (Button) findViewById(R.id.remove_slide_button);
         mRemoveSlide.setOnClickListener(mOnRemoveSlide);
 
+<<<<<<< HEAD
+=======
         mTextEditor = (EditText) findViewById(R.id.text_message);
         mTextEditor.setFilters(new InputFilter[] {
                 new LengthFilter(MmsConfig.getMaxTextLimit())});
 
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
         mDone = (Button) findViewById(R.id.done_button);
         mDone.setOnClickListener(mDoneClickListener);
 

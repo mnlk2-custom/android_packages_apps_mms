@@ -233,6 +233,10 @@ public class MediaModelFactory {
 
         media.setDuration(duration);
 
+<<<<<<< HEAD
+        // Set 'fill' property.
+        media.setFill(sme.getFill());
+=======
         if (!MmsConfig.getSlideDurationEnabled()) {
             /**
              * Because The slide duration is not supported by mmsc,
@@ -245,6 +249,7 @@ public class MediaModelFactory {
             // Set 'fill' property.
             media.setFill(sme.getFill());
         }
+>>>>>>> e1e63883f6938766484afeae3c4e36e6c29680dc
         return media;
     }
 }
