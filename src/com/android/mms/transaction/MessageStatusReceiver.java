@@ -34,7 +34,7 @@ import com.android.mms.LogTag;
 public class MessageStatusReceiver extends BroadcastReceiver {
     public static final String MESSAGE_STATUS_RECEIVED_ACTION =
             "com.android.mms.transaction.MessageStatusReceiver.MESSAGE_STATUS_RECEIVED";
-    private static final String[] ID_PROJECTION = new String[] { Sms._ID };
+    private static final String[] ID_PROJECTION = new String[] { Sms._ID, Sms.ADDRESS };
     private static final String LOG_TAG = "MessageStatusReceiver";
     private static final Uri STATUS_URI =
             Uri.parse("content://sms/status");
