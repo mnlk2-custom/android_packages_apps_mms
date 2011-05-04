@@ -345,7 +345,11 @@
     
     <!-- Which timestamps -->
     <string name="pref_title_mms_use_sent_timestamp">Afficher l\'heure d\'envoi</string>
-    <string name="pref_summary_mms_use_sent_timestamp">Affiche l\'heure d\'envoi au lieu de l\'heure de réception\n(heure affichée en heure GMT chez certains opérateurs)</string>
+    <string name="pref_summary_mms_use_sent_timestamp">Montre la date d\'envoi de l'\opérateur au lieu de la date de réception pour les messages reçus</string>
+
+    <!-- Timestamp GMT Corection -->
+    <string name="pref_title_mms_use_sent_timestamp_gmt_correction">Correction GMT</string>
+    <string name="pref_summary_mms_use_sent_timestamp_gmt_correction">Activer si l\'heure d'envoi de l\'opérateur est exprimimée en GMT</string>
 
     <!-- Setting item for folder to save MMS Attachments to -->
     <string name="pref_title_save_location">Dossier de sauvegarde</string>

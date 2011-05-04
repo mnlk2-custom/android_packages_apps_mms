@@ -63,6 +63,7 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
     public static final String MMS_SAVE_LOCATION        = "pref_save_location";
     public static final String BLACK_BACKGROUND         = "pref_key_mms_black_background";
     public static final String SENT_TIMESTAMP           = "pref_key_mms_use_sent_timestamp";
+    public static final String SENT_TIMESTAMP_GMT_CORRECTION = "pref_key_mms_use_sent_timestamp_gmt_correction";
     
     // Menu entries
     private static final int MENU_RESTORE_DEFAULTS    = 1;

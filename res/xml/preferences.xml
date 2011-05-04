@@ -107,6 +107,12 @@
     <CheckBoxPreference android:key="pref_key_mms_use_sent_timestamp"
                         android:title="@string/pref_title_mms_use_sent_timestamp"
                         android:summary="@string/pref_summary_mms_use_sent_timestamp"
-                        android:defaultValue="false" />                        
+                        android:defaultValue="false" />  
+                         
+    <CheckBoxPreference android:key="pref_key_mms_use_sent_timestamp_gmt_correction"
+                        android:title="@string/pref_title_mms_use_sent_timestamp_gmt_correction"
+                        android:summary="@string/pref_summary_mms_use_sent_timestamp_gmt_correction"
+                        android:defaultValue="false"
+                        android:dependency="pref_key_mms_use_sent_timestamp" />                                             
   </PreferenceCategory>  
 </PreferenceScreen>
