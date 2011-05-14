@@ -349,7 +349,7 @@
 
     <!-- Timestamp GMT Corection -->
     <string name="pref_title_mms_use_sent_timestamp_gmt_correction">Correction GMT</string>
-    <string name="pref_summary_mms_use_sent_timestamp_gmt_correction">Activer si l\'heure d\'envoi de l\'opérateur est exprimimée en GMT</string>
+    <string name="pref_summary_mms_use_sent_timestamp_gmt_correction">Activer si l\'heure d\'envoi Opérateur est affichée en GMT</string>
 
     <!-- Setting item for folder to save MMS Attachments to -->
     <string name="pref_title_save_location">Dossier de sauvegarde</string>
